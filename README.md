@@ -3,13 +3,14 @@ Deployment of Aws ec2 infrastructure with terraform using github-actions to auto
 
 #### Project overview
 
-1.Docker Setup: Create an accout in Dockerhub to be able to deploy and store docker images activities.
+1.IAM user Setup: create an IAM user with administrative access and generate secret key and access key for that user.
 
-2.Github: Through the imagecreation.yml file script we are able to build and push docker images to dockerhub 
+2.Github: Creet the prpject in gihuband clone to your root directory in your local terminal 
 
-4.Github Configuration: We are oushing the code to gihub so it makes sens if other activities will be halppening on the gihub self hosted runner. We can specify which operating system we are connecting to in aws if its ubuntun, amazon etc
+4.Github Configuration: We are pushing our codes to github so it makes sense if other activities will be happening on the github hosted runner itself. We can specify which operating system we are connecting to in aws if its ubutun, amazon etc
 
-5.Docker - installed docker on the server, to enable you build docker images
+5.Create terraform files - icrete terraform files neccessacry for the provisioning
+6. Create backend.tf files to store terraform statefiles
 
 #### Prerequisites:
 
@@ -47,7 +48,7 @@ touch gihubactions-infra.yml
 <img width="1620" height="1290" alt="Image" src="https://github.com/user-attachments/assets/dd0ee542-d9d4-4893-9f4d-dd87ef1d5259" />
 
 
-#### step 2: Set up Aws creadentials  in Github(Github integration with aws)
+#### step 2: Set up Aws credentials in Github(Github integration with aws)
 
 #### Go to this pject in github and look for settings
 
@@ -63,19 +64,18 @@ and secret keys
 
 <img width="2434" height="1124" alt="Image" src="https://github.com/user-attachments/assets/f23f806d-94cc-4a44-967c-d5cf058978f4" />
 
-
-<img width="2370" height="922" alt="Image" src="https://github.com/user-attachments/assets/e0710adc-f5e2-4958-ba47-ae910d60c14c" />
-
 #### Step 3:Running the git push on my local terminal
 
 <img width="1700" height="474" alt="Image" src="https://github.com/user-attachments/assets/72b87a17-67ec-4fc8-9ede-fd5abdb6ba0a" />
 
 
-#### As shown git push trigeers github to trigger the pipeline actions as shown below 
+#### As shown git push trigers github to kick start the github actions pipeline actions as shown below 
 
 <img width="2542" height="1330" alt="Image" src="https://github.com/user-attachments/assets/16f0b078-ce85-4d39-a4f1-0a8c56ab2773" />
 
-#### Step 4:jenkins server installed with giyhub actions cicd
+#### Step 4:jenkins server installed with github actions cicd
+
+<img width="2370" height="922" alt="Image" src="https://github.com/user-attachments/assets/e0710adc-f5e2-4958-ba47-ae910d60c14c" />
 
 <img width="2020" height="1086" alt="Image" src="https://github.com/user-attachments/assets/d8f153e6-8ba0-4936-a847-3d79dcc71f17" />
 
