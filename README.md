@@ -53,63 +53,94 @@ touch gihubactions-infra.yml
 name: Infrastructure Provisioning with Gihubactions
 
 on:
+
   push:
+
     branches:
+
       - master
 permissions:
       id-token: write # for aws oidc connection
+
       contents: read   # for actions/checkout
+
       pull-requests: write # for GitHub bot to comment PR
 env:
+
   TF_LOG: INFO
+
   AWS_REGION: ${{ secrets.AWS_REGION }}
+
   AWS_ACCESS_KEY: ${{ secrets.AWSACCESSKEY }}
+
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWSSECRETACCESSKEY }}
+
   role-session-name: GitHub-OIDC-TERRAFORM      
 
 jobs:
+
   deploy:
+
     name: Terraform
+
     runs-on: ubuntu-latest
+
     defaults:
+
       run:
+
         shell: bash
+
         working-directory: ./infra
+
     steps:
 
     - name: Checkout Repo
+
       uses: actions/checkout@v1
 
 
     - name: Setup Terraform
+
       uses: hashicorp/setup-terraform@v2
       with:
         
         terraform_version: 1.5.5
 
     - name: Terraform fmt
+
       id: fmt
+
       run: terraform fmt
 
     - name: Terraform Init
       id: init
+
       env:
         AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+
         AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME }}
+
       run: |
         rm -rf .terraform
+
         terraform init 
         
     - name: Terraform Validate
       id: validate
+
       run: terraform validate -no-color 
 
     - name: Terraform Plan
+
       id: plan
+
       run: terraform plan -no-color
 
     - name: Terraform destroy
+
       id: apply 
+
       run: terraform destroy -auto-approve
       
     
@@ -181,6 +212,7 @@ and secret keys
 ============
 #### STAGE 2: CLEAN UP
 ==============
+
 #### step1 : Destroy the resources created
 
 #### run terraform destroy 
