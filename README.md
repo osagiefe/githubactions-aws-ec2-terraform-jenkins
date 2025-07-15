@@ -119,3 +119,5 @@ and secret keys
 #### step1 : Destroy the resources created
 
 #### run terraform destroy 
+
+<img width="1250" height="718" alt="Image" src="https://github.com/user-attachments/assets/3a8a66f6-40e7-4aa8-ad9f-57b41e5fde4f" />
