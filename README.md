@@ -121,3 +121,9 @@ and secret keys
 #### run terraform destroy 
 
 <img width="1250" height="718" alt="Image" src="https://github.com/user-attachments/assets/3a8a66f6-40e7-4aa8-ad9f-57b41e5fde4f" />
+
+
+<img width="2288" height="1364" alt="Image" src="https://github.com/user-attachments/assets/070499cd-54c4-4d6b-a49e-2a6b2c64798e" />
+
+
+<img width="2510" height="1132" alt="Image" src="https://github.com/user-attachments/assets/74874182-249d-42f9-b00a-f541bbdac9fd" />
