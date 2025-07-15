@@ -1,4 +1,4 @@
-# Project Title: Github-actions-ec2-infrastructure-terraform
+# Project Title: Github Actions Ec2 Infrastructure Provsioning with Terraform
 Deployment of Aws ec2 infrastructure with terraform using github-actions to automate the cicd process workflow and on top of the ec2 instance we install jenkins
 
 #### Project overview
@@ -73,6 +73,14 @@ and secret keys
 
 <img width="2542" height="1330" alt="Image" src="https://github.com/user-attachments/assets/16f0b078-ce85-4d39-a4f1-0a8c56ab2773" />
 
+
+<img width="2526" height="1272" alt="Image" src="https://github.com/user-attachments/assets/6e45fa42-d6bf-4783-a7d6-61e9e8b98642" />
+
+
+#### If git push is ruan again miatekingly youn get bthe response below
+
+<img width="2544" height="1268" alt="Image" src="https://github.com/user-attachments/assets/5bed1a46-85d6-439a-ab9e-5f40a1b2bc3f" />
+
 #### Step 4:jenkins server installed with github actions cicd
 
 <img width="2370" height="922" alt="Image" src="https://github.com/user-attachments/assets/e0710adc-f5e2-4958-ba47-ae910d60c14c" />
@@ -102,3 +110,12 @@ and secret keys
 
 
 <img width="2556" height="1382" alt="Image" src="https://github.com/user-attachments/assets/79e6c493-ca9a-4688-b6a4-98d99551ff2e" />
+
+
+
+============
+#### STAGE 2: CLEAN UP
+==============
+#### step1 : Destroy the resources created
+
+#### run terraform destroy 
