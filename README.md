@@ -1,16 +1,27 @@
 # Project Title: Github Actions Ec2 Infrastructure Provsioning with Terraform
-Deployment of Aws ec2 infrastructure with terraform using github-actions to automate the cicd process workflow and on top of the ec2 instance we install jenkins
+Deployment of Aws ec2 infrastructure with terraform using github-actions to 
+automate the cicd process workflow and on top of the ec2 instance we install jenkins
 
 #### Project overview
 
 1.IAM user Setup: create an IAM user with administrative access and generate secret key and access key for that user.
 
-2.Github: Creet the prpject in gihuband clone to your root directory in your local terminal 
+2.Github: Create the project in github and clone to your root directory in your local terminal 
 
-4.Github Configuration: We are pushing our codes to github so it makes sense if other activities will be happening on the github hosted runner itself. We can specify which operating system we are connecting to in aws if its ubutun, amazon etc
+4.Github Configuration: We are pushing our codes to github so it makes sense if 
 
-5.Create terraform files - icrete terraform files neccessacry for the provisioning
-6. Create backend.tf files to store terraform statefiles
+other activities will be happening on the github hosted runner itself. We can
+
+ specify which operating system we are connecting to in aws if its ubutu or 
+  amazon linux etc
+
+5.Create terraform files - create terraform files neccessary for the provisioning of our resources
+
+6. Create backend.tf files to configure and store terraform statefiles.
+
+7. store all the terraform files inside folde called infra
+
+<img width="564" height="886" alt="Image" src="https://github.com/user-attachments/assets/43935dfa-30f6-4b45-956f-ec7a2960b926" />
 
 #### Prerequisites:
 
