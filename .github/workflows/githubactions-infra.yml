@@ -1,6 +1,15 @@
 name: Infrastructure Provisioning with Gihubactions
 
 on:
+  workflow_dispatch:
+    inputs:
+      terraform_action:
+        type: choice
+        description: select terraform action
+        options:
+        - apply
+        - destroy
+        required: true
   push:
     branches:
       - master
@@ -57,8 +66,12 @@ jobs:
       id: plan
       run: terraform plan -no-color
 
+    - name: Terraform apply
+      id: apply 
+      run: terraform apply -auto-approve
+
     - name: Terraform destroy
       id: destroy 
-      run: terraform destroy -auto-approve
+      run: terraform destroy -auto-approve  
       
     
