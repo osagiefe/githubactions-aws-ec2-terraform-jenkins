@@ -5,3 +5,4 @@ variable "env_prefix" {}
 variable "instance_type" {}
 variable "ami" {}
 variable "region" {}
+variable "key_name" {}

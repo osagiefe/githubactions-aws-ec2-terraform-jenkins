@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - main
 permissions:
       id-token: write # for aws oidc connection
       contents: read   # for actions/checkout
@@ -22,7 +23,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./infra
+        working-directory: /infra
     steps:
 
     - name: Checkout Repo
